@@ -566,26 +566,26 @@ a {
     z-index: 1;
     cursor: pointer;
     transition: transform .3s;
-  }
+}
 
   .menu-left-checkbox-2:hover ~ .nav .productoras {
     background-color: rgb(36, 36, 36);
-  }
+}
 
   .menu-left-checkbox-2:checked ~ .nav .productoras > ul {
     max-height: 500px;
     background-color: transparent;
     margin-bottom: 10px;
-  }
+}
 
   .menu-left-checkbox-2:checked ~ .nav .productoras {
     background-color: transparent;
-  }
+}
 
   .menu-left-checkbox-2:checked ~ .nav .productoras i {
     transform: rotate(180deg);
     transition: transform .3s;
-  }
+}
 
 footer{
     position: absolute;
