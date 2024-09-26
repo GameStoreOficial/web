@@ -454,8 +454,27 @@ a {
     padding-top: 10px;
     overflow: auto;
 }
+.nav ul, li, a {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    list-style: none;
+    background-color: transparent;
+}
 
-.nav {
+  .header {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    left: 0px;
+    top: 100px;
+    background-color: transparent;
+    z-index: 2;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+  .nav {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -464,11 +483,11 @@ a {
     width: 200px;
 }
 
-.nav li {
+  .nav li {
     position: relative;
 }
 
-.nav li a {
+  .nav li a {
     background-color: transparent;
     text-decoration: none;
     padding: 10px 15px;
@@ -479,30 +498,94 @@ a {
     color: white;
 }
 
-.nav li a:hover {
+  .nav li a:hover {
     background-color: rgb(36, 36, 36);
 }
 
-.nav li ul {
+  .nav li ul {
     max-height: 0;
     overflow: hidden;
     padding: 0 10px;
-    transition: max-height 0.6s ease-out;
+    transition: max-height 0.3s ease-out;
     background-color: transparent;
 }
 
-.nav li:hover>ul {
-    max-height: 500px;
-}
-
-.nav li ul li a {
-    background-color: transparent   ;
+  .nav li ul li a {
+    background-color: transparent;
     padding-left: 20px;
 }
 
-.nav li ul li a:hover {
+  .nav li ul li a:hover {
     background-color: rgb(36, 36, 36);
 }
+
+  .menu-left-checkbox {
+    appearance: none;
+    position: absolute;
+    background-color: transparent;
+    width: 200px;
+    height: 40px;
+    left: 26px;
+    top: 45px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+  .menu-left-checkbox:hover ~ .nav .categorias {
+    background-color: rgb(36, 36, 36);
+}
+
+  .menu-left-checkbox:checked ~ .nav .categorias > ul {
+    max-height: 500px;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+  .menu-left-checkbox:checked ~ .nav .categorias {
+    background-color: transparent;
+}
+
+  .menu-left-checkbox:checked ~ .nav .categorias i {
+    transform: rotate(180deg);
+    transition: transform .3s;
+}
+
+  .menu-left-checkbox:checked ~ .menu-left-checkbox-2{
+    transform: translateY(189px);
+    transition: transform .3s;
+}
+
+  .menu-left-checkbox-2 {
+    appearance: none;
+    position: absolute;
+    background-color: transparent;
+    width: 200px;
+    height: 40px;
+    left: 26px;
+    top: 85px;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform .3s;
+  }
+
+  .menu-left-checkbox-2:hover ~ .nav .productoras {
+    background-color: rgb(36, 36, 36);
+  }
+
+  .menu-left-checkbox-2:checked ~ .nav .productoras > ul {
+    max-height: 500px;
+    background-color: transparent;
+    margin-bottom: 10px;
+  }
+
+  .menu-left-checkbox-2:checked ~ .nav .productoras {
+    background-color: transparent;
+  }
+
+  .menu-left-checkbox-2:checked ~ .nav .productoras i {
+    transform: rotate(180deg);
+    transition: transform .3s;
+  }
 
 footer{
     position: absolute;
